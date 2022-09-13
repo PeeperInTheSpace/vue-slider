@@ -29,12 +29,37 @@
     <body>
 
         <main id="root">
-
-            <h1 class="fl-h1 text-center pt-5 mb-5"><img src="img/vuelogo.png" alt="" class="img-fluid fl-logo"> SLIDER</h1>
+            
+            <!-- PAGE TITLE -->
+            <h1 class="fl-h1 text-center pt-5 mb-5"><img src="img/vuelogo.png" alt="" class="img-fluid fl-logo">SLIDER</h1>
     
-            <div class="fl-container d-flex flex-column pt-5 justify-content-center align-items-center">
-                <img src="img/01.jpg" alt="" class="img-fluid w-50 rounded-5">
-            </div>
+            <!-- SLIDER -->
+
+            <section class="container d-flex pt-5 justify-content-center align-items-center">
+
+                <!-- PICTURES -->
+
+                <div class="row d-flex text-center pictures">
+                    <div v-for="(item, index) in mainArray" class="item mb-5" :class="index === currentSlide ? 'active' : ''">
+                        <img src="img/01.jpg" alt="" class="img-fluid w-100">
+                        <div class="text-center fl-text mt-5">
+                            <h3>{{item.title}}</h3>
+                            <p>{{item.text}}</p>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <i class="bi bi-arrow-left-circle-fill" style="font-size: 2rem"></i>
+
+                            <!-- THUMBNAILS CICLE -->
+                            <div v-for="(item, index) in mainArray" class="thumb" :class="index === currentSlide ? 'active' : ''">
+                                <img :src="item.image" :alt="item.title" @click="thumbClick(index)">
+                            </div>
+
+                        <i class="bi bi-arrow-right-circle-fill" style="font-size: 2rem"></i>
+                    </div>
+                </div>
+
+            </section>
     
          </main>
 

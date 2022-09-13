@@ -17,11 +17,10 @@ body {
     font-size: 75px;
 }
 
-.fl-logo {
-    height: 100px;
+.fl-text {
+    font-family: 'Turret Road', cursive;
 }
 
-.fl-container {
-    border: 1px solid black;
-    width: 50%;
+.fl-logo {
+    height: 100px;
 }
