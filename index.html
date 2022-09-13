@@ -40,21 +40,23 @@
                 <!-- PICTURES -->
 
                 <div class="row d-flex text-center pictures">
-                    <div v-for="(item, index) in mainArray" class="item mb-5" :class="index === currentSlide ? 'active' : ''">
-                        <img src="img/01.jpg" alt="" class="img-fluid w-100">
-                        <div class="text-center fl-text mt-5">
-                            <h3>{{item.title}}</h3>
-                            <p>{{item.text}}</p>
+                    <div>
+                        <img src="img/01.jpg" alt="">
+                        <div class="text-center fl-text m-5">
+                            <h3>Titolo</h3>
+                            <p>Descrizione</p>
                         </div>
                     </div>
                     <div class="d-flex justify-content-between">
                         <i class="bi bi-arrow-left-circle-fill" style="font-size: 2rem"></i>
-
-                            <!-- THUMBNAILS CICLE -->
-                            <div v-for="(item, index) in mainArray" class="thumb" :class="index === currentSlide ? 'active' : ''">
-                                <img :src="item.image" :alt="item.title" @click="thumbClick(index)">
-                            </div>
-
+                                <!-- THUMBNAILS -->
+                                <div>
+                                    <img src="img/01.jpg" alt="" class="fl-thumbnails">
+                                    <img src="img/02.jpg" alt="" class="fl-thumbnails">
+                                    <img src="img/03.jpg" alt="" class="fl-thumbnails">
+                                    <img src="img/04.jpg" alt="" class="fl-thumbnails">
+                                    <img src="img/05.jpg" alt="" class="fl-thumbnails">
+                                </div>
                         <i class="bi bi-arrow-right-circle-fill" style="font-size: 2rem"></i>
                     </div>
                 </div>
