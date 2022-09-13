@@ -1,0 +1,27 @@
+/* GENERAL SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle, rgba(210,224,255,1) 17%, rgba(3,83,99,1) 100%) fixed, no-repeat;
+}
+
+/* PERSONAL CLASSES & IDs */
+
+.fl-h1 {
+    font-family: 'Turret Road', cursive;
+    font-size: 75px;
+}
+
+.fl-logo {
+    height: 100px;
+}
+
+.fl-container {
+    border: 1px solid black;
+    width: 50%;
+}
