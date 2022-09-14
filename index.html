@@ -50,12 +50,8 @@
                     <div class="d-flex justify-content-between">
                         <i class="bi bi-arrow-left-circle-fill" style="font-size: 2rem" @click="showPrev"></i>
                                 <!-- THUMBNAILS -->
-                                <div>
-                                    <img src="img/01.jpg" alt="" class="fl-thumbnails">
-                                    <img src="img/02.jpg" alt="" class="fl-thumbnails">
-                                    <img src="img/03.jpg" alt="" class="fl-thumbnails">
-                                    <img src="img/04.jpg" alt="" class="fl-thumbnails">
-                                    <img src="img/05.jpg" alt="" class="fl-thumbnails">
+                                <div v-for="(item, index) in imagesArray" class="fl-thumbnails" :class="index === activeIndex ? 'active' : ''">
+                                    <img :src="item.image" :alt="item.title" class="fl-thumbnails">
                                 </div>
                         <i class="bi bi-arrow-right-circle-fill" style="font-size: 2rem" @click="showNext"></i>
                     </div>
