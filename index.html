@@ -28,27 +28,27 @@
 
     <body>
 
-        <main id="root">
+        <main>
             
             <!-- PAGE TITLE -->
             <h1 class="fl-h1 text-center pt-5 mb-5"><img src="img/vuelogo.png" alt="" class="img-fluid fl-logo">SLIDER</h1>
     
             <!-- SLIDER -->
 
-            <section class="container d-flex pt-5 justify-content-center align-items-center">
+            <section class="container d-flex pt-5 justify-content-center align-items-center"  id="root">
 
                 <!-- PICTURES -->
 
                 <div class="row d-flex text-center pictures">
-                    <div>
-                        <img src="img/01.jpg" alt="">
+                    <div class="min-w-100">
+                        <img :src="imagesArray[activeIndex].image" :alt="imagesArray[activeIndex].title">
                         <div class="text-center fl-text m-5">
-                            <h3>Titolo</h3>
-                            <p>Descrizione</p>
+                            <h3>{{ imagesArray[activeIndex].title }}</h3>
+                            <p>{{ imagesArray[activeIndex].text }}</p>
                         </div>
                     </div>
                     <div class="d-flex justify-content-between">
-                        <i class="bi bi-arrow-left-circle-fill" style="font-size: 2rem"></i>
+                        <i class="bi bi-arrow-left-circle-fill" style="font-size: 2rem" @click="showPrev"></i>
                                 <!-- THUMBNAILS -->
                                 <div>
                                     <img src="img/01.jpg" alt="" class="fl-thumbnails">
@@ -57,7 +57,7 @@
                                     <img src="img/04.jpg" alt="" class="fl-thumbnails">
                                     <img src="img/05.jpg" alt="" class="fl-thumbnails">
                                 </div>
-                        <i class="bi bi-arrow-right-circle-fill" style="font-size: 2rem"></i>
+                        <i class="bi bi-arrow-right-circle-fill" style="font-size: 2rem" @click="showNext"></i>
                     </div>
                 </div>
 
