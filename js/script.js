@@ -10,7 +10,7 @@ const slider = new Vue (
             {
                 image: 'img/01.jpg',
                 title: 'Svezia',
-                text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
+                text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
             },
             {
                 image: 'img/02.jpg',
@@ -48,7 +48,7 @@ const slider = new Vue (
                 }
             },
             showNext (){
-                if (this.activeIndex++ === this.imagesArray.length -1) {
+                if (this.activeIndex === this.imagesArray.length -1) {
                     this.activeIndex = 0;
                 } else {
                     this.activeIndex++;

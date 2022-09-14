@@ -34,3 +34,8 @@ body {
     height: 100px;
     margin: 5px;
 }
+
+.fl-bigImage {
+    width: 500px;
+    height: 250px;
+}
